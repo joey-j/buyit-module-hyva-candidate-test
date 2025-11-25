@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Buyitdirect Group
+ *
+ * @category    BuyIt
+ * @package     HyvaCandidateTest
+ * @copyright   Copyright (c) 2025-current Buyitdirect Group (https://www.buyitdirectgroup.co.uk/)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="BuyIt_HyvaCandidateTest" setup_version="1.0.0">
+        <sequence>
+            <module name="Hyva_Theme"/>
+            <module name="Hyva_CompatModuleFallback"/>
+        </sequence>
+    </module>
+</config>

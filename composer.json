@@ -1,0 +1,20 @@
+{
+  "name": "buyit/module-hyva-candidate-test",
+  "description": "Hyva test module for buyitdirect group",
+  "type": "magento2-module",
+  "autoload": {
+	"files": [
+	  "registration.php"
+	],
+	"psr-4": {
+	  "BuyIt\\HyvaCandidateTest\\": ""
+	}
+  },
+  "version": "1.0.0",
+  "require": {
+	"php": ">=8.1.0",
+	"magento/framework": ">=102.0.0",
+	"hyva-themes/magento2-default-theme": ">=1.2.3",
+	"hyva-themes/magento2-compat-module-fallback": ">=1.1.2"
+  }
+}

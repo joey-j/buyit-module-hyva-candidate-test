@@ -1,0 +1,118 @@
+<?php
+/**
+ * Buyitdirect Group
+ *
+ * @category    BuyIt
+ * @package     HyvaCandidateTest
+ * @copyright   Copyright (c) 2025-current Buyitdirect Group (https://www.buyitdirectgroup.co.uk/)
+ */
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use Hyva\Theme\ViewModel\HeroiconsOutline;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use BuyIt\HyvaCandidateTest\ViewModel\CarouselProducts;
+
+/**
+ * @var Template $block
+ * @var Escaper $escaper
+ * @var ViewModelRegistry $viewModels
+ */
+
+/** @var HeroiconsOutline $heroicons */
+$heroicons = $viewModels->require(HeroiconsOutline::class);
+
+/** @var CarouselProducts $carouselProducts */
+$carouselProducts = $viewModels->require(CarouselProducts::class);
+
+$testProducts = $carouselProducts->getTestProducts();
+$showTitle = $block->getShowTitle() !== null ? $block->getShowTitle() : true;
+$defaultWidth = 168;
+$defaultHeight = 168;
+
+$sliderName = preg_replace('/[.\/\\\\]/', '_', $block->getNameInLayout());
+$columnCount = $block->getData('column_count') ?: 8;
+$sliderClasses = array_filter([
+	'relative shrink-0 flex flex-col px-2 w-full',
+	$columnCount >= 2 ? 'md:w-1/2' : '',
+	$columnCount >= 3 ? 'lg:w-1/3' : '',
+	$columnCount >= 4 ? 'xl:w-1/4' : '',
+	$columnCount >= 5 ? '2xl:w-1/5' : ''
+]);
+$title = 'You may be interested in these';
+$type = 'generic';
+
+$items = $carouselProducts->getTestProducts();
+?>
+
+<?php if ($items): ?>
+    <section
+            id="<?= /* @noEscape */ $sliderName ?>"
+            class="product-slider relative my-8"
+            aria-label="<?= $escaper->escapeHtmlAttr($title); ?>"
+            data-slider-type="<?= $escaper->escapeHtmlAttr($type) ?>"
+            x-data
+            x-snap-slider.group-pager
+            x-defer="intersect"
+    >
+        <a
+                href="#<?= $escaper->escapeHtmlAttr($sliderName) ?>-slider-end"
+                class="sr-only focus:not-sr-only  focus:z-10 focus:absolute focus:inset-x-0
+            focus:w-fit focus:mx-auto focus:py-2 focus:px-4 focus:bg-white"
+        ><?= $escaper->escapeHtml(__('Press to skip carousel')) ?></a>
+        <div class="flex gap-2 justify-between items-center mb-2 pb-4 border-b-2 border-gray-300">
+            <h3 class="text-2xl font-medium text-gray-900 title-font">
+			    <?= $escaper->escapeHtml($title); ?>
+            </h3>
+        <div class="flex gap-2">
+            <button
+                    class="btn btn-secondary p-2 invisible"
+                    aria-label="Previous Slide"
+                    data-prev
+                    disabled
+            ><?= $heroicons->arrowLeftHtml('rtl:-rotate-180', 18, 18, ['aria-hidden' => 'true']); ?></button>
+            <button
+                    class="btn btn-secondary p-2 invisible"
+                    aria-label="Next Slide"
+                    data-next
+                    disabled
+            ><?= $heroicons->arrowRightHtml('rtl:-rotate-180', 18, 18, ['aria-hidden' => 'true']); ?></button>
+        </div>
+        </div>
+        <div
+                data-track
+                class="group js_slides flex snap overflow-x-auto py-4 -mx-1"
+        >
+			<?php foreach ($items as $product): ?>
+                <div
+                        id="<?= $sliderName . '-' . $product['id'] ?>"
+                        class="<?= $escaper->escapeHtmlAttr(implode(' ', $sliderClasses)) ?>"
+                >
+					<img src="<?= $product['img_url'] ?>"/>
+                </div>
+			<?php endforeach; ?>
+        </div>
+        <div data-pager class="hidden md:flex flex-wrap justify-center gap-2 py-2 min-h-11">
+			<?php
+			$pagerIndex = 0;
+			foreach ($items as $product):
+				?>
+                <button
+                        class="shrink-0 w-3 h-3 m-2 rounded-full bg-slate-400 cursor-point transition-[background-color,width,outline-offset]
+                    focus:outline-offset-4 focus:outline-slate-700
+                    aria-[current=true]:bg-slate-700 aria-[current=true]:w-6"
+                        aria-label="<?= $escaper->escapeHtmlAttr(__('View more about %1', $product['name'])) ?>"
+                        data-target-id="<?= $sliderName . '-' . $product['id'] ?>"
+                        x-cloak
+					<?php if ($pagerIndex === 0): ?>
+                        aria-current="true"
+					<?php endif; ?>
+                ></button>
+				<?php
+				$pagerIndex++;
+			endforeach;
+			?>
+        </div>
+        <span id="<?= $escaper->escapeHtmlAttr($sliderName) ?>-slider-end" tabindex="-1"></span>
+    </section>
+<?php endif; ?>
