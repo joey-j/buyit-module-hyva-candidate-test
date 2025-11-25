@@ -43,9 +43,9 @@ class CarouselProducts implements ArgumentInterface
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 1 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	121.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
 				'id' 					=> 	2,
@@ -53,9 +53,9 @@ class CarouselProducts implements ArgumentInterface
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 2 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	122.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
 				'id' 					=> 	3,
@@ -63,9 +63,9 @@ class CarouselProducts implements ArgumentInterface
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 3 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	123.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
 				'id' 					=> 	4,
@@ -75,7 +75,7 @@ class CarouselProducts implements ArgumentInterface
 				'img_alt'				=>	'Haier 939 iPro',
 				'special_price' 		=>	124.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
 				'id' 					=> 	5,
@@ -83,59 +83,59 @@ class CarouselProducts implements ArgumentInterface
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	125.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
-				'id' 					=> 	5,
+				'id' 					=> 	6,
 				'name' 					=>	'Haier 939 iPro Series 5 9kg Washing Machine',
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	126.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
-				'id' 					=> 	5,
+				'id' 					=> 	7,
 				'name' 					=>	'Haier 939 iPro Series 5 9kg Washing Machine',
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	127.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
-				'id' 					=> 	5,
+				'id' 					=> 	8,
 				'name' 					=>	'Haier 939 iPro Series 5 9kg Washing Machine',
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	128.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
-				'id' 					=> 	5,
+				'id' 					=> 	9,
 				'name' 					=>	'Haier 939 iPro Series 5 9kg Washing Machine',
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	129.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 			[
-				'id' 					=> 	5,
+				'id' 					=> 	10,
 				'name' 					=>	'Haier 939 iPro Series 5 9kg Washing Machine',
 				'short_description' 	=>	'This is the short description for the product Haier 939 iPro Series 5 9kg Washing Machine',
 				'img_url'				=>	$this->getPlaceHolderImg(),
 				'img_alt'				=>	'Haier 939 iPro',
-				'special_price' 		=>	124.97,
+				'special_price' 		=>	130.97,
 				'price' 				=>	179.97,
-				'product_label'			=>	'SAVE £30'
+				'product_label'			=>	'SAVE <span class=" text-2xl leading-5">£30</span>'
 			],
 		];
 	}

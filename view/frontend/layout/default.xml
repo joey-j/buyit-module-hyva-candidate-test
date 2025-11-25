@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Buyitdirect Group
+ *
+ * @category    BuyIt
+ * @package     HyvaCandidateTest
+ * @copyright   Copyright (c) 2025-current Buyitdirect Group (https://www.buyitdirectgroup.co.uk/)
+ */
+ -->
 <page
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"

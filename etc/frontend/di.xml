@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Buyitdirect Group
+ *
+ * @category    BuyIt
+ * @package     HyvaCandidateTest
+ * @copyright   Copyright (c) 2025-current Buyitdirect Group (https://www.buyitdirectgroup.co.uk/)
+ */
+ -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Hyva\CompatModuleFallback\Model\CompatModuleRegistry">
+        <arguments>
+            <argument name="compatModules" xsi:type="array">
+                <item name="buyit-module-hyva-candidate-test" xsi:type="array">
+                    <item name="original_module" xsi:type="string">BuyIt_HyvaCandidateTest</item>
+                    <item name="compat_module" xsi:type="string">BuyIt_HyvaCandidateTest</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+
